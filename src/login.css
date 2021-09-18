@@ -163,7 +163,7 @@ body {
 @media screen and (max-width: 650px) {
     .login-container {
         width: 100%;
-        height:100vh;
+        /* height:100vh; */
        
     }
 }
@@ -171,6 +171,11 @@ body {
 @media screen and (max-width: 500px) {
     .login-container {
         width: 100%;
+    }
+    .inputs-container {
+        
+        width: 90%;
+        
     }
 }
 
