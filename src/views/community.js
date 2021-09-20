@@ -46,11 +46,11 @@ export default (userX) => {
               <form id = "form-post">
                 <textarea class="text-newpost" placeholder="¿What do you want to share today?" spellcheck="false" required></textarea>
                 <i id = "remove-img" style="display: none" class="fas fa-times-circle"></i>
-                <img id="post-img" class="post-img" src=""/> <label class= "btn-uploadImg" for="upload-img"> Upload an image
+                <img id="post-img" class="post-img" src=""/>
                     <input type="file" accept="image/jpeg, image/png, image/gif" id="upload-img" class="upload-img">
                     <i class="far fa-file-image"></i>
                    
-                  </label> 
+   
                 <div class="buttons-bar">
                  
                   <button type="submit" id="btn-post" class="btn-post" ><i class="fa fa-share-square-o"></i> Share</button>
