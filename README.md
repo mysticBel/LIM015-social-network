@@ -11,10 +11,8 @@
 
 ## 1. Descripción
 
-Instagram, Snapchat, Twitter, Facebook, Twitch, Linkedin, etc. Las redes
-sociales han invadido nuestras vidas. Las amamos u odiamos, y muchos no podemos
-vivir sin ellas.
-'Skyy' es una red social libre sin ningun concepto aún, puede adaptarse a cualquier ámbito; 
+Las redes sociales han invadido nuestras vidas. Las amamos u odiamos, y muchos no podemos
+vivir sin ellas.'Skyy' es una red social libre sin ningun concepto aún, puede adaptarse a cualquier ámbito; 
 además, permite la interacción entre usuarios para un mejor dinamismo de la información posteada.
 
 
@@ -24,7 +22,7 @@ además, permite la interacción entre usuarios para un mejor dinamismo de la in
 * Qué problema resuelve el producto / para qué le servirá a estos usuarios. -->
 
 ## 2. Historias de usuario
-![img](https://xyzExanple!.png)
+![img](https://github.com/mysticBel/LIM015-social-network/blob/main/src/images/historiasdeUsers_1.png)
 
 
 ## 3. Diseño de la Interfaz de Usuario (prototipo de baja fidelidad)
@@ -35,13 +33,15 @@ siga este flujo.
 
 * Vista mobile
 
-    ![mobile](https://user-images.githubusercontent.com/32286663/56174616-ec9f6100-5fb8-11e9-9edb-d5ef7c251d9c.png)
+    <!-- ![mobile](https://user-images.githubusercontent.com/32286663/56174616-ec9f6100-5fb8-11e9-9edb-d5ef7c251d9c.png) -->
 
 * Vista Desktop
 
-    ![desktop](https://user-images.githubusercontent.com/32286663/56174626-fcb74080-5fb8-11e9-8854-26e8d9c4e25f.png)
+    <!-- ![desktop](https://user-images.githubusercontent.com/32286663/56174626-fcb74080-5fb8-11e9-8854-26e8d9c4e25f.png) -->
     
-## 4.  Consideraciones del comportamiento de la interfaz de usuario (UI)
+## 4. Criterios de aceptación mínimos del proyecto
+
+### 4.1 Consideraciones del comportamiento de la interfaz de usuario (UI)
 
 Estas consideraciones te ayudarán a escribir las Definiciones de Terminado de
 tus H.U.:
@@ -80,7 +80,7 @@ tus H.U.:
     información editada.
   - [✔️🐟]Al recargar la página debo de poder ver los textos editados.
 
-### 4.1 Consideraciones técnicas Front-end
+### 4.2 Consideraciones técnicas Front-end
 
 * [✔️🦄] Separar la manipulación del DOM de la lógica (Separación de responsabilidades).
 * [✔️🦄] Contar con múltiples vistas. Para esto, tu aplicación debe ser una
@@ -98,7 +98,7 @@ tus H.U.:
 * [✔️🦊] Los tests unitarios deben cubrir un mínimo del 70% de _statements_, _functions_,
   _lines_, y _branches_.
 
-### 4.2 Consideraciones técnicas UX
+### 4.3 Consideraciones técnicas UX
 
 * Hacer al menos 2 entrevistas con usuarios.
 * [✔️🦊] _Hacer un prototipo de baja fidelidad._
