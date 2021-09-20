@@ -1,5 +1,6 @@
+/* eslint-disable no-console */
 import {
-  getUserData, upgradeLike,
+  getUserData, upgradeLike, upgradePost, removePost,
 } from '../scripts/firestore.js';
 import {
   currentUser,
@@ -20,8 +21,8 @@ export const itemPost = (objPost) => {
       <div class="menu-post">
         <!-- <i class="fas fa-ellipsis-v btn-menu-post"></i>-->
         <ul id="menu-post-content" class="menu-post-content">
-          <li id="edit-post"><i class="fas fa-edit select"></i> Edit</li>
-          <li id="delete-post-${objPost.id}"><i class="fas fa-trash-alt select"></i> Delete</li>
+          <li id="edit-postsss"><i class="fas fa-edit select"></i> Edit</li>
+          <li id="delete-postsss-${objPost.id}"><i class="fas fa-trash-alt select"></i> Delete</li>
         </ul>
       </div>               
       <img class="avatar-post" src=""/>
@@ -33,11 +34,14 @@ export const itemPost = (objPost) => {
         </span>
       </p>
       
+    
+      <p class="time-post">  <i  id="edit-post" class="fa fa-pencil-square-o"></i>
+         <i id="delete-post-${objPost.id}" class="fa fa-trash-o" ></i>${objPost.date}</p>
+          
      
-      <p class="time-post">${objPost.date}</p>
-     <!-- <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-      <i class="fa fa-trash-o" ></i> -->
+
       
+
     </div>       
     <div class="content-post">
       <p class="text-post">${objPost.publication}</p>
@@ -54,8 +58,14 @@ export const itemPost = (objPost) => {
        
         </section>
         <button type="button" id="btn-like" class=""><i class="fa fa-thumbs-up"></i>${reactionCounter} Like </button>
-       <!-- <button type="button" id="btn-comment" class="btn-comment"><i class="fa fa-comment"></i>Comment </button>-->
-      </div>`;
+       
+         <!-- <button type="button" id="btn-comment" class="btn-comment"><i class="fa fa-comment"></i>Comment </button>-->
+      </div>
+      
+      
+      
+      
+      `;
 
       // show name + avatar in every postElement
       getUserData(objPost.userId)
@@ -69,6 +79,44 @@ export const itemPost = (objPost) => {
           tooltipimg.src = doc.data().photo;
           nametooltip.textContent = doc.data().username.toUpperCase();
         });
+
+      // edit post
+      const editPost = postElement.querySelector('#edit-post');
+      const editPublication = postElement.querySelector('.edit-text');
+      const btnSaveEdit = postElement.querySelector(`.btn-save-edit-${objPost.id}`);
+      const btnCancelEdit = postElement.querySelector('.btn-cancel-edit');
+      editPost.addEventListener('click', () => {
+        if (userId === objPost.userId) {
+          postElement.querySelector('.edit-text-post').style.display = 'block';
+        } else {
+          console.log('me apretaste');
+        }
+      });
+
+      // upgrade post
+      btnSaveEdit.addEventListener('click', () => {
+        if (editPublication.value !== '') {
+          upgradePost(objPost.id, editPublication.value);
+        } else {
+          console.log('me apretaste actualizar');
+        }
+      });
+      // cancel post
+      btnCancelEdit.addEventListener('click', () => {
+        postElement.querySelector('.edit-text-post').style.display = 'none';
+        editPublication.value = objPost.publication;
+      });
+
+      // delete post
+      const deletePost = postElement.querySelector(`#delete-post-${objPost.id}`);
+      deletePost.addEventListener('click', () => {
+        console.log('wii');
+        if (userId === objPost.userId) {
+          removePost(objPost.id);
+        } else {
+          console.log('no me puedes borrar >:v');
+        }
+      });
 
       // store users likes
       const likes = postElement.querySelector('#btn-like');

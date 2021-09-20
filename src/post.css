@@ -83,7 +83,7 @@ object-fit: cover;
 .time-post{
   opacity: 0.7;
   font-size: 0.8rem;
-  width: min-content;
+  width: 150px;
   text-align: right;
   margin: 0 0.5rem 0  auto !important;
 }
@@ -154,8 +154,8 @@ object-fit: cover;
   transition: all ease 0.5s;
 }
 .btn-post{
-  width: 20% !important;
-  margin-left: 70%;
+  width: 25% !important;
+  margin-left: 75%;
 }
 .btn-post:hover,
 .btn-comment:hover,
@@ -278,10 +278,35 @@ object-fit: cover;
   }
   #deleteModal:hover{
     color:white;
-  }
-   */
+  } */
+/*   
+  holaas */
+
+ #edit-post{
+   cursor: pointer;
+   opacity: 0.7;
+   font-size: 0.8rem;
+   width: min-content;
+   text-align: right;
+   margin: 0 0.5rem 0  auto !important;
+ }
+
+ .fa-trash-o{
+  cursor: pointer;
+  opacity: 0.7;
+  font-size: 0.8rem;
+  width: min-content;
+  text-align: right;
+  margin: 0 0.5rem 0  auto !important;
+ }
+
+
+
   @media (min-width: 320px) and (max-width: 425px){
     .container-user-post{
+      width: 100%;
+    }
+    .btn-post{
       width: 100%;
     }
   } 
