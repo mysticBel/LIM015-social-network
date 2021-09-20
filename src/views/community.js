@@ -120,6 +120,10 @@ export default (userX) => {
           const uploadPost = imgStorage(fileImage, 'Skyy-imgPost');
           uploadPost.on(
             'state_changed',
+            (snapshot) => {
+              const progress = ((snapshot.bytesTransferred / snapshot.totalBytes) * 100);
+              console.log(progress);
+            },
             () => {},
             () => {
               uploadPost.snapshot.ref.getDownloadURL().then((downloadURL) => {
