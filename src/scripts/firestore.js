@@ -57,3 +57,24 @@ export const upgradePost = (idPost, updatePublication) => {
 };
 
 export const upgradeLike = (id, likes) => firebase.firestore().collection('Skyy').doc(id).update({ likes });
+
+export const commentAdd = (UserId, idPost, Comment) => {
+  const db = firebase.firestore();
+  return db.collection('Skyy').doc(idPost).collection('Skyy_Comment').add({
+    userId: UserId,
+    date: new Date().toLocaleString(),
+    comment: Comment,
+  });
+};
+
+export const getComment = (idPost, callback) => {
+  const db = firebase.firestore();
+  db.collection(`Skyy/${idPost}/Skyy_Comment`).orderBy('date', 'desc')
+    .onSnapshot((querySnapshot) => {
+      const comment = [];
+      querySnapshot.forEach((doc) => {
+        comment.push({ id: doc.id, ...doc.data() });
+      });
+      callback(comment);
+    });
+};
