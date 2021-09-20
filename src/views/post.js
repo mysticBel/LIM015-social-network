@@ -1,11 +1,11 @@
 /* eslint-disable no-console */
 import {
-  getUserData, upgradeLike, upgradePost, removePost,
+  getUserData, upgradeLike, upgradePost, removePost, commentAdd, getComment,
 } from '../scripts/firestore.js';
 import {
   currentUser,
 } from '../scripts/auth.js';
-// import { itemComment } from './comments.js';
+import { itemComment } from './comments.js';
 
 export const itemPost = (objPost) => {
   const postElement = document.createElement('div');
@@ -61,6 +61,15 @@ export const itemPost = (objPost) => {
        
          <!-- <button type="button" id="btn-comment" class="btn-comment"><i class="fa fa-comment"></i>Comment </button>-->
       </div>
+
+      <section id ="container-comment" >
+      <div id = "container-AllComment"></div>
+      <form class="div-comment formComment">
+        <textarea class="comment" placeholder="Write a comment ..." required></textarea>
+        <button type="submit" class="fas fa-paper-plane"></button>
+      </form>
+      
+    </section>  
       
       
       
@@ -136,6 +145,27 @@ export const itemPost = (objPost) => {
       } else {
         likes.className = 'btn-like-plane active-reaction';
       }
+
+      // add comment to Firestore
+      const formComment = postElement.querySelector('.formComment');
+      formComment.addEventListener('submit', (e) => {
+        const comment = postElement.querySelector('.comment').value;
+        e.preventDefault();
+        commentAdd(user.uid, objPost.id, comment)
+          .then(() => {
+            formComment.reset();
+          });
+      });
+
+      // Get comment to container
+      const containerAllComment = postElement.querySelector('#container-AllComment');
+      getComment(objPost.id, (comment) => {
+        containerAllComment.innerHTML = '';
+        comment.forEach((objComment) => {
+          containerAllComment.appendChild(itemComment(objComment, objPost.id));
+        });
+      });
+      // hasta aqui va bien
     } else {
       window.location.hash = '#/';
     }
