@@ -22,7 +22,7 @@ además, permite la interacción entre usuarios para un mejor dinamismo de la in
 * Qué problema resuelve el producto / para qué le servirá a estos usuarios. -->
 
 ## 2. Historias de usuario
-![img](https://github.com/mysticBel/LIM015-social-network/blob/main/src/images/historiasdeUsers_1.png)
+![img](https://raw.githubusercontent.com/mysticBel/LIM015-social-network/main/src/images/historiasdeUsers_1.png)
 
 
 ## 3. Diseño de la Interfaz de Usuario (prototipo de baja fidelidad)
