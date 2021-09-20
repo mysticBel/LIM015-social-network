@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { currentUser, signOut } from '../scripts/auth.js';
 import { postAdd, getPost } from '../scripts/firestore.js';
 import { imgStorage } from '../scripts/storage.js';
@@ -44,12 +45,12 @@ export default (userX) => {
             </div>
             <div class="content-newpost">
               <form id = "form-post">
-                <textarea class="text-newpost" placeholder="¿What do you want to share today?" spellcheck="false" required></textarea>
+                <textarea class="text-newpost" placeholder="¿What's on your mind, ${userX.username} ?" spellcheck="false" required></textarea>
                 <i id = "remove-img" style="display: none" class="fas fa-times-circle"></i>
-                <img id="post-img" class="post-img" src=""/>
+                <img id="post-img" class="post-img" src=""/><label for="upload-img">
                     <input type="file" accept="image/jpeg, image/png, image/gif" id="upload-img" class="upload-img">
                     <i class="far fa-file-image"></i>
-                   
+                    </label>
    
                 <div class="buttons-bar">
                  
@@ -107,33 +108,22 @@ export default (userX) => {
       //  ===== ADDS POST IN FIREBASE =========
       const savePost = viewCommunity.querySelector('#form-post');
       savePost.addEventListener('submit', (e) => {
+        console.log('boton submit');
         e.preventDefault();
         imagePost.src = '';
         imageDelete.style.display = 'none';
         const fileImage = e.target.closest('#form-post').querySelector('input')
           .files[0];
-        // const load = viewCommunity.querySelector('#uploader');
         const postText = viewCommunity.querySelector('.text-newpost');
-        // const enterModal = viewCommunity.querySelector('.modal-progress');
-        // const textModal = viewCommunity.querySelector('#messageAlert');
 
         if (fileImage) {
           const uploadPost = imgStorage(fileImage, 'Skyy-imgPost');
           uploadPost.on(
             'state_changed',
-            // (snapshot) => {
-            // const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-            // enterModal.classList.add('showModal');
-            // viewCommunity.querySelector('#closeModal').style.display = 'none';
-            // viewCommunity.querySelector('#uploader').style.display = 'block';
-            // textModal.textContent = 'Success! Your publication is ready :D ';
-            // load.value = progress;
-            // },
             () => {},
             () => {
               uploadPost.snapshot.ref.getDownloadURL().then((downloadURL) => {
                 postAdd(user.uid, postText.value, downloadURL).then(() => {
-                  // enterModal.classList.remove('showModal');
                   savePost.reset();
                 });
               });
@@ -141,7 +131,6 @@ export default (userX) => {
           );
         } else {
           postAdd(user.uid, postText.value, '').then(() => {
-            // enterModal.classList.remove('showModal');
             savePost.reset();
           });
         }
