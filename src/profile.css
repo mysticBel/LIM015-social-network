@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+ 
+.profile-container {
+  width:100%;border-radius: 15px !important;
+}
+.profile-content {
+  width: 100%;
+  margin: 0 auto; 
+  
+}
+.profile-information {
+  width: 100%;
+  position: relative; 
+  z-index: 0;  
+}
+.cover-page {
+  width: 100%;
+  height: 250px;
+  position: relative; 
+  z-index: 0; 
+}
+.edit-cover {
+  position: absolute; 
+  right: 1rem; 
+  bottom: 50%; 
+  z-index: 2;   
+  outline: none;
+  border:none;
+  text-align: center;
+  cursor: pointer; 
+}
+
+.hide{
+    display: none;
+  }
+.profile-photo {
+  width: 100%; 
+  height: 170px; 
+  top: 28%; 
+  z-index: 1;
+  position: absolute; 
+  background-color: transparent;
+  justify-content: center;
+}
+.photo {
+  width: 170px; 
+  height: 170px; 
+  display: block; 
+  margin-left: auto;
+  margin-right: auto; 
+  background-color: white; 
+  border-radius: 50%; 
+  border: 0.3rem solid white; 
+  object-fit: cover;
+}
+
+
+
+.container-user-post {
+  width: 50%;
+  margin: 2rem auto; 
+  background-color: white;
+}
+.container-user-post p{
+  margin: 0.5rem 0.5rem;
+}
+  .edit-photo-btn {
+    height: 33px; 
+    width: 33px;
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto;
+    padding: 0.3rem; 
+    border-radius: 50%; 
+    background-color: white; 
+    font-size: 1.40rem;
+  }
+  .cover-photo {
+    width: 100%; 
+    height: 100%; 
+    z-index: 0; 
+    object-fit: cover;
+  }
+  .profile-photo {
+    width: 100%; 
+    height: 170px; 
+    top: 35%; 
+    z-index: 1;
+    position: absolute; 
+    background-color: transparent;
+    justify-content: center;
+  }
+  .photo {
+    width: 150px; 
+    height: 150px; 
+    display: block; 
+    margin-left: auto;
+    margin-right: auto; 
+    background-color: white; 
+    border-radius: 50%; 
+    border: 0.3rem solid white; 
+    object-fit: cover;
+  }
+  
+  .user-information {
+    width: 100%; 
+    z-index: 0;
+    padding: 4.5rem 3rem 3rem 3rem; 
+    /* background-color: rgba(199, 227, 243, 0.199); */
+    color: #222; 
+    border-radius: 0 0 1.5rem 1.5rem;
+    position: relative;
+  }
+
+  .user-information h2 {
+    text-align: center;
+    color: rgba(34, 34, 34, 0.76); 
+    font-size: 1.95rem; 
+  }
+
+  .container-user-post {
+    width: 50%;
+    margin: 2rem auto; 
+    background-color: white;
+  }
+  .container-user-post p{
+    margin: 0.5rem 0.5rem;
+  }
