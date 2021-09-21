@@ -78,3 +78,5 @@ export const getComment = (idPost, callback) => {
       callback(comment);
     });
 };
+
+export const coveragePhoto = (userId, photoCover) => firebase.firestore().collection('Skyy_Users').doc(userId).update({ photoCover });
