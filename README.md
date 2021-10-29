@@ -1,5 +1,8 @@
 # Skyy🌜 - Social Network
 
+![image](https://media.giphy.com/media/dyAnngHb30dDdiaW3x/giphy.gif)
+
+
 ## Índice
 
 * [1. Descripción](#1-Descripción)
@@ -22,22 +25,23 @@ además, permite la interacción entre usuarios para un mejor dinamismo de la in
 * Qué problema resuelve el producto / para qué le servirá a estos usuarios. -->
 
 ## 2. Historias de usuario
-![img](https://raw.githubusercontent.com/mysticBel/LIM015-social-network/main/src/images/historiasdeUsers_1.png)
+![img](https://raw.githubusercontent.com/mysticBel/LIM015-social-network/main/src/images/user-stories.png)
 
 
-## 3. Diseño de la Interfaz de Usuario (prototipo de baja fidelidad)
+## 3. Diseño de la Interfaz de Usuario - Responsive Design
 
-Debes definir cuál será el flujo que seguirá el usuario dentro de tu aplicación
-y, con eso, diseña la Interfaz de Usuario (UI por sus siglas en inglés) que
-siga este flujo.
 
-* Vista mobile
+* Vista Mobile
 
-    <!-- ![mobile](https://user-images.githubusercontent.com/32286663/56174616-ec9f6100-5fb8-11e9-9edb-d5ef7c251d9c.png) -->
+   ![mobile](https://raw.githubusercontent.com/mysticBel/LIM015-social-network/main/src/images/mobile-view-community.png) 
+    ![mobile-profile](https://raw.githubusercontent.com/mysticBel/LIM015-social-network/main/src/images/mobile-view-profile.png)
 
+  
 * Vista Desktop
 
-    <!-- ![desktop](https://user-images.githubusercontent.com/32286663/56174626-fcb74080-5fb8-11e9-8854-26e8d9c4e25f.png) -->
+![desktop](https://raw.githubusercontent.com/mysticBel/LIM015-social-network/main/src/images/desktop-view-community.png)
+![desktop-profile](https://raw.githubusercontent.com/mysticBel/LIM015-social-network/main/src/images/desktop-view-profile.png)
+
     
 ## 4. Criterios de aceptación mínimos del proyecto
 
@@ -118,8 +122,8 @@ profundizar y/o ejercitar más sobre los objetivos de aprendizaje del proyecto.
 * Permite definir la privacidad de los _posts_ (público o solamente para amigos).
 * Permite ver su muro de cualquier usuario "no-amigo" (solamente los
   posts _públicos_).
-* Permite comentar o responder una publicación.
-* Permite editar perfil.
+* [✔️🐉]Permite comentar o responder una publicación.
+* [✔️🐉]Permite editar perfil. *solo el banner
 
 
 ## 6. Pistas, tips y Lecturas complementarias
@@ -175,4 +179,10 @@ Otras:
 * [Mobile First Is NOT Mobile Only - Nielsen Norman Group](https://www.nngroup.com/articles/mobile-first-not-mobile-only/)
 </details>😜
 
-**Social Network** - _Project for Laboratoria._
+<br><br><br>
+
+![image](https://media.giphy.com/media/Vim3NxYb5kNoD9RDIs/giphy.gif)
+<br>
+_**Social Network**_  is a project done by Maribel Maza for [Laboratoria](https://github.com/Laboratoria) , <br>August 2021 🤗
+<br><br><br>
+<a href="https://www.linkedin.com/in/maribel-maza/"><img alt="LinkedIn" src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=flat&logo=linkedin&logoColor=white"/></a> <a href="https://github.com/mysticBel"><img alt="Github" src="https://img.shields.io/github/followers/mysticBel?label=follow&style=social"/></a> &nbsp;
